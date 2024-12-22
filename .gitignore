@@ -9,7 +9,7 @@ target/
 *.iml
 *.ipr
 
-
+config.properties
 
 ### Mac OS ###
 .DS_Store
