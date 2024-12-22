@@ -1,6 +1,7 @@
 package com.weatherapi.backend;
 
 import com.weatherapi.backend.client.WeatherApiClient;
+import com.weatherapi.backend.listeners.WeatherApiTestListener;
 import com.weatherapi.backend.providers.WeatherApiDataProvider;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -10,6 +11,7 @@ import org.testng.asserts.SoftAssert;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+@Listeners(WeatherApiTestListener.class)
 public class WeatherApiBackendTest {
     private WeatherApiClient apiClient;
     private SoftAssert softAssert;

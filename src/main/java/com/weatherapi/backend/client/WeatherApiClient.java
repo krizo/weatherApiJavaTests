@@ -25,12 +25,9 @@ public class WeatherApiClient {
  * @return Response the response object containing the weather data
  */
 public Response getCurrentWeather(String location) {
-        System.out.println("Sending request for city: " + location);
-
         return given()
                 .spec(requestSpec)
                 .queryParam("q", location)
-                .log().parameters()
                 .get(ConfigLoader.getWeatherEndpoint());
     }
 
